@@ -25,11 +25,9 @@ $.getJSON( "http://api.aerisapi.com/forecasts/11101?client_id=mrWm7AFVW86e9GKKX4
     var year = parseInt(dateArray[0]);
     var month = parseInt(dateArray[1]);
     var day = parseInt(dateArray[2].substring(0,2));
-    console.log(val.dateTimeISO.substring(0,10) + " " + day);
     var date = new Date(val.dateTimeISO.substring(0,10));
     var dayOfWeek = date.getDay();
-    console.log(dayOfWeek);
-
+    
     items.push("<td>" + "<b>"+weekArray[dayOfWeek]+"</b><br> "+monthDict[month]+" "+day+", "+year + "</td>");
     items.push("<td>HIGH: " + val.maxTempF + "</td>");
     items.push("<td>LOW: " + val.minTempF + "</td>");

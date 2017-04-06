@@ -34,7 +34,12 @@ p {
 }
 
 table{
+  border-collapse:collapse;
   width:100%;
+}
+
+tr{
+	border-top: 3px solid black;
 }
 
 td{
@@ -65,7 +70,7 @@ body{
 .banner{
 	padding: 10px 20px;
 	margin: 0;
-	background-color: #454343;
+	background-color: #778899;
   color: white;
   border-top:  2px solid white;
   border-bottom: 2px solid white;
