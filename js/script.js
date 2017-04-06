@@ -27,10 +27,10 @@ $.getJSON( "http://api.aerisapi.com/forecasts/11101?client_id=mrWm7AFVW86e9GKKX4
     var day = parseInt(dateArray[2].substring(0,2));
     var date = new Date(val.dateTimeISO.substring(0,10));
     var dayOfWeek = date.getDay();
-    
+
     items.push("<td>" + "<b>"+weekArray[dayOfWeek]+"</b><br> "+monthDict[month]+" "+day+", "+year + "</td>");
-    items.push("<td>HIGH: " + val.maxTempF + "</td>");
-    items.push("<td>LOW: " + val.minTempF + "</td>");
+    items.push("<td class=\"temp\">HIGH: " + val.maxTempF +"&deg;F"  +"</td>");
+    items.push("<td class=\"temp\">LOW: " + val.minTempF +"&deg;F"+"</td>");
     items.push("<td><img src=\"img/" + val.icon + "\"> </td>");
     items.push("</tr>");
   });
